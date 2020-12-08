@@ -10,7 +10,7 @@ class Header extends React.Component {
       case null:
         return <div>loading</div>;
       case false:
-        return <a href="auth/google">Signin Witth Google</a>;
+        return <a href="auth/google">Sign In With Google</a>;
       default:
         return [
           <li key="1">

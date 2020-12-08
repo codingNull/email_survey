@@ -8,8 +8,7 @@ import reducers from "./reducers";
 
 import App from "./components/App";
 
-const INIT_STATE = {};
-const store = createStore(reducers, INIT_STATE, applyMiddleware(reactThunk));
+const store = createStore(reducers, {}, applyMiddleware(reactThunk));
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,6 +16,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-
-console.log(process.env.REACT_APP_STRIPE_KEY);
-console.log(process.env.NODE_ENV);

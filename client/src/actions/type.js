@@ -1,2 +1,2 @@
 export const FETCH_USER = "fetch_user";
-export const ADD_CREDITS = "add_credits";
+export const FETCH_SURVEYS = "fetch_surveys";

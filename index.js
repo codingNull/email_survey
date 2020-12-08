@@ -7,6 +7,7 @@ const { MongodbURI, sessionKey } = require("./config/keys");
 require("./services/passport");
 const bodyParser = require("body-parser");
 const payRoute = require("./routes/payRoute");
+const surveyRoute = require("./routes/surveyRoutes");
 
 const app = express();
 mongoose.connect(MongodbURI);
@@ -21,6 +22,7 @@ app.use(passport.session());
 app.use(bodyParser.json());
 authRoutes(app);
 payRoute(app);
+surveyRoute(app);
 
 if (process.env.NODE_ENV === "production") {
   //serve up main.js or main.css files
